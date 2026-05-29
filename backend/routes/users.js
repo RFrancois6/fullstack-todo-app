@@ -2,6 +2,7 @@ const db = require('../db/database')
 
 const express = require('express')
 const router = express.Router()
+const auth = require('../middleware/auth')
 
 const deleteAllUsers = db.prepare(`DELETE FROM users`);
 router.delete('/', (req, res) => {
@@ -18,14 +19,14 @@ router.delete('/', (req, res) => {
   `)
 })
 
-const getUsers = db.prepare(`SELECT * FROM users`)
-router.get('/', (req, res) => {
-    res.send('GET ALL request on users')
-    getUsers.run()
+const getUsers = db.prepare(`SELECT id, email FROM users`)
+router.get('/', auth, (req, res) => {
+    const users = getUsers.all()
+    res.json(users)
 })
 
 const getUserByEmail = db.prepare(`SELECT * FROM users WHERE email = ?`)
-router.get('/:email', (req, res) => {
+router.get('/:email', auth, (req, res) => {
     res.send('GET ALL request on users')
     getUserByEmail.run(req.params[0])
 })
