@@ -6,7 +6,6 @@ const saltRounds = 10
 const jwt = require('jsonwebtoken')
 
 const insertUser = db.prepare(`INSERT INTO users (email, password) VALUES (?, ?)`)
-
 router.post('/register', (req, res) => {
     bcrypt.genSalt(saltRounds, (err, salt) => {
         if (err) return res.status(500).end()
@@ -19,7 +18,6 @@ router.post('/register', (req, res) => {
 })
 
 const getUser = db.prepare(`SELECT * FROM users WHERE email = ?`)
-
 router.post('/login', (req, res) => {
     const userData = getUser.get(req.body.email)
     if (userData === undefined) {
