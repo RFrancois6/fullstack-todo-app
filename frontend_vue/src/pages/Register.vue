@@ -1,12 +1,12 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 flex items-center justify-center p-4">
+  <div class="min-h-screen bg-gradient-to-br from-[#42b883] via-emerald-500 to-[#35495e] flex items-center justify-center p-4">
     <div class="w-full max-w-md">
       <div class="text-center mb-8">
         <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur rounded-2xl mb-4">
           <span class="text-3xl">🚀</span>
         </div>
         <h1 class="text-3xl font-bold text-white">Créer un compte</h1>
-        <p class="text-purple-200 mt-1">Commencez à organiser vos tâches</p>
+        <p class="text-emerald-100 mt-1">Commencez à organiser vos tâches</p>
       </div>
 
       <div class="bg-white rounded-3xl shadow-2xl p-8">
@@ -18,7 +18,7 @@
               type="email"
               placeholder="vous@exemple.com"
               required
-              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition text-gray-800 placeholder-gray-400"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#42b883] focus:border-transparent transition text-gray-800 placeholder-gray-400"
             />
           </div>
 
@@ -29,7 +29,7 @@
               type="password"
               placeholder="••••••••"
               required
-              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition text-gray-800 placeholder-gray-400"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#42b883] focus:border-transparent transition text-gray-800 placeholder-gray-400"
             />
           </div>
 
@@ -39,7 +39,7 @@
 
           <button
             type="submit"
-            class="w-full py-3 px-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-violet-700 hover:to-indigo-700 transition transform hover:scale-[1.01] active:scale-[0.99] shadow-lg shadow-violet-200"
+            class="w-full py-3 px-4 bg-gradient-to-r from-[#42b883] to-[#35495e] text-white font-semibold rounded-xl hover:opacity-90 transition transform hover:scale-[1.01] active:scale-[0.99] shadow-lg shadow-emerald-200"
           >
             S'inscrire
           </button>
@@ -47,7 +47,7 @@
 
         <p class="text-center text-sm text-gray-500 mt-6">
           Déjà un compte ?
-          <RouterLink to="/login" class="text-violet-600 font-semibold hover:text-violet-700">
+          <RouterLink to="/login" class="text-[#42b883] font-semibold hover:text-emerald-700">
             Se connecter
           </RouterLink>
         </p>
