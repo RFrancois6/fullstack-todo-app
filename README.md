@@ -41,9 +41,10 @@ The goal is educational: compare React (hooks, props/state, Context) and Vue (Co
 - [x] Backend — Auth (register / login) with JWT and bcrypt
 - [x] Backend — Route protection middleware
 - [x] Backend — Protected Todos CRUD (`GET`, `POST`, `PATCH`, `DELETE`)
-- [ ] React frontend — AuthContext + Login/Register
-- [ ] React frontend — Todos page with optimistic updates
-- [ ] Vue frontend — same features, rewritten
+- [x] React frontend — AuthContext + Login/Register
+- [x] React frontend — Todos page with optimistic updates
+- [x] Vue frontend — same features, rewritten
+- [ ] New features for both frontend
 
 ## Run locally
 
@@ -53,8 +54,13 @@ cd backend
 npm install
 npm run dev
 
-# React frontend (in another terminal)
-cd frontend-react
+# Vite frontend (in another terminal)
+cd frontend_vite
+npm install
+npm run dev
+
+# Vue frontend (in one more terminal)
+cd frontend_vue
 npm install
 npm run dev
 ```
